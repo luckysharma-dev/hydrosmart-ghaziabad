@@ -1,16 +1,34 @@
-# React + Vite
+# 💧 HydroSmart - Ghaziabad Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**HydroSmart** is an intelligent Information System designed to tackle the groundwater crisis in Ghaziabad. It connects residents with the *financial logic*, *verified experts*, and *community data* needed to adopt Rainwater Harvesting (RWH).
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[## 🚀 Live Demo
+[click to see](https://hydrosmart-ghaziabad.vercel.app)]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Key Features
 
-## React Compiler
+### 1. Intelligent Calculator 🧮
+- Uses **Ghaziabad's meteorological data** (Avg rainfall: ~750mm).
+- Calculates **Annual Water Potential** based on roof area.
+- Provides a real-time **Cost Estimate** (Tank + Filter + Labor) based on 2025 market rates.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Vendor Marketplace 🛠️
+- A directory of verified RWH contractors in Ghaziabad/Noida.
+- Includes ratings, contact details, and service types (Consulting vs. Full Installation).
 
-## Expanding the ESLint configuration
+### 3. Community Impact Map 🗺️
+- Interactive map powered by **Leaflet.js**.
+- Visualizes active RWH sites and verified vendors across the city.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React.js + Vite
+- **Styling:** Tailwind CSS
+- **Mapping:** React-Leaflet (OpenStreetMap)
+- **Icons:** Lucide React
+
+## ⚡ How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/hydrosmart.git](https://github.com/your-username/hydrosmart.git)

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Calculator from './components/Calculator';
 import Marketplace from './components/Marketplace';
 import MapView from './components/MapView';
+import WeatherWidget from './components/WeatherWidget'; // <--- IMPORT ADDED
 
 function App() {
   const [page, setPage] = useState('home');
@@ -14,10 +15,16 @@ function App() {
       <main className="flex-grow pb-10">
         {page === 'home' && (
           <div className="animate-fade-in">
-            <div className="text-center py-12 bg-gradient-to-r from-blue-600 to-cyan-500 text-white mb-8 shadow-lg">
+            <div className="text-center py-12 bg-gradient-to-r from-blue-600 to-cyan-500 text-white mb-8 shadow-lg pb-16">
               <h1 className="text-5xl font-bold mb-4">Save Every Drop.</h1>
               <p className="text-xl opacity-90">The smartest way to plan rainwater harvesting in Ghaziabad.</p>
             </div>
+
+            {/* <--- WIDGET IS HERE */}
+            <div className="-mt-12 relative z-10 mb-8">
+               <WeatherWidget />
+            </div>
+
             <Calculator />
           </div>
         )}
