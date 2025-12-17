@@ -14,29 +14,20 @@ function App() {
   const [page, setPage] = useState('home');
 
   return (
-    // Added inline style for the background image
-    <div
-      className="min-h-screen flex flex-col relative font-sans"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=1974&auto=format&fit=crop')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    // CHANGED: Removed background image, added Cream White color (bg-[#fafaf9])
+    <div className="min-h-screen flex flex-col relative font-sans bg-[#fafaf9] text-gray-800">
+
       <Navbar setPage={setPage} />
 
-      <main className="flex-grow relative z-10"> {/* Added z-10 to keep content above background */}
+      <main className="flex-grow">
         {page === 'home' && (
           <div className="animate-fade-in">
-            {/* Hero Section - Made transparent to show background */}
-            <div className="text-center py-16 text-white mb-8 shadow-xl pb-20 rounded-b-[3rem] bg-gradient-to-r from-blue-700/80 to-cyan-600/80 backdrop-blur-sm">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight drop-shadow-md">Save Every Drop.</h1>
-              <p className="text-xl opacity-90 max-w-2xl mx-auto drop-shadow">The smartest way to plan rainwater harvesting in Ghaziabad. Join the movement today.</p>
+            {/* Hero Section - Solid Gradient */}
+            <div className="text-center py-16 bg-gradient-to-r from-blue-700 to-cyan-600 text-white mb-8 shadow-xl pb-20 rounded-b-[3rem]">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">Save Every Drop.</h1>
+              <p className="text-xl opacity-90 max-w-2xl mx-auto">The smartest way to plan rainwater harvesting in Ghaziabad. Join the movement today.</p>
             </div>
 
-            {/* ... (rest of your components: WeatherWidget, PledgeCard, etc.) */}
             {/* Weather Widget */}
             <div className="-mt-16 relative z-10 mb-12 px-4">
               <WeatherWidget />
@@ -56,7 +47,7 @@ function App() {
                 </div>
                 <div className="flex flex-col gap-6">
                   <TankAnimation />
-                  <div className="bg-blue-50/90 backdrop-blur-sm p-6 rounded-xl border border-blue-100 shadow-lg">
+                  <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                     <h3 className="font-bold text-blue-800 mb-2">Why Harvest Rain?</h3>
                     <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
                       <li>Reduces water bills by up to 40%.</li>
@@ -69,9 +60,7 @@ function App() {
             </div>
 
             {/* Knowledge Hub Section */}
-            <div className="bg-white/90 backdrop-blur-md py-8">
-              <KnowledgeHub />
-            </div>
+            <KnowledgeHub />
 
           </div>
         )}
@@ -80,8 +69,8 @@ function App() {
         {page === 'map' && <MapView />}
       </main>
 
-      {/* RICH FOOTER - Made semi-transparent */}
-      <footer className="bg-gray-900/90 backdrop-blur-sm text-gray-300 py-12 mt-auto border-t border-gray-800 relative z-10">
+      {/* RICH FOOTER */}
+      <footer className="bg-gray-900 text-gray-300 py-12 mt-auto border-t border-gray-800">
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h4 className="text-white font-bold text-lg mb-4">HydroSmart 💧</h4>
@@ -106,7 +95,6 @@ function App() {
           <div>
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <p className="text-sm">support@hydrosmart.in</p>
-            {/* <p className="text-sm">+91 98912 31452</p> */}
             <p className="text-sm">+91 98765 43210</p>
             <div className="flex gap-4 mt-4">
               <span className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 cursor-pointer">𝕏</span>
