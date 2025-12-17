@@ -13,7 +13,7 @@ const HydroBot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  // --- YOUR CORRECT LOGIC IS HERE ---
+  
   const getBotResponse = (text) => {
     const lowerText = text.toLowerCase();
 
@@ -44,7 +44,7 @@ const HydroBot = () => {
     setInput("");
     setIsTyping(true);
 
-    // Simulate AI thinking delay
+    
     setTimeout(() => {
       const botReply = { text: getBotResponse(input), sender: "bot" };
       setMessages((prev) => [...prev, botReply]);

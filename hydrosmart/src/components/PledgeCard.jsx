@@ -1,9 +1,9 @@
-    import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Confetti from 'react-confetti';
 
 const PledgeCard = () => {
   const [pledged, setPledged] = useState(false);
-  const [count, setCount] = useState(1245); 
+  const [count, setCount] = useState(1245);
 
   const handlePledge = () => {
     if (!pledged) {
